@@ -1,0 +1,23 @@
+name: portfolio Desployment
+
+on:
+  push:
+    bracnhes:
+    - main
+job:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Configure AWS Credentails
+    - uses: aws-actions/configure-aws-credentails@v1
+    with:
+    aws-access-key-id: ${{}}
+    aws-secret-access-key: ${{}}
+    aws-region:
+
+  -name: Deploy static site to S3 bucket
+  
+    
